@@ -80,15 +80,14 @@ if (mail($address, $e_subject, $msg, $headers)) {
     echo "<p>Thank you <strong>$name</strong>, your message has been submitted to us.</p>";
     echo "</div>";
     echo "</fieldset>";
+
+    // Reset form fields
+    $_POST['name'] = '';
+    $_POST['email'] = '';
+    $_POST['comments'] = '';
 } else {
     echo 'ERROR!';
 }
-
-//reset all fields
-$name     = "";
-$email    = "";
-$comments = "";
-
 
 
 ?>
