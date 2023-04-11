@@ -80,14 +80,6 @@ if (mail($address, $e_subject, $msg, $headers)) {
     echo "<p>Thank you <strong>$name</strong>, your message has been submitted to us.</p>";
     echo "</div>";
     echo "</fieldset>";
-
-    // Clear all form fields
-    echo "<script>
-document.getElementById('name').value = '';
-document.getElementById('email').value = '';
-document.getElementById('sub').value = '';
-document.getElementById('comments').value = '';
-</script>";
 } else {
     echo 'ERROR!';
 }

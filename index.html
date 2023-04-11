@@ -1411,6 +1411,22 @@
       const currentYear = document.getElementById("currentYear");
       currentYear.innerText = new Date().getFullYear();
     </script>
+    <script>
+      function clearForm() {
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("sub").value = "";
+        document.getElementById("comments").value = "";
+      }
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          setTimeout(clearForm, 2000);
+          this.submit();
+        });
+    </script>
 
     <!-- <script>
       fetch(
