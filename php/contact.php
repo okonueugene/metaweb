@@ -72,10 +72,6 @@ $headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
 $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
 if (mail($address, $e_subject, $msg, $headers)) {
-    // Reset form
-    echo '<script type="text/javascript">document.getElementById("contact-form").reset();</script>';
-
-
     // Email has sent successfully, echo a success page.
 
     echo "<fieldset>";
@@ -87,6 +83,12 @@ if (mail($address, $e_subject, $msg, $headers)) {
 } else {
     echo 'ERROR!';
 }
+
+//reset all fields
+$name     = "";
+$email    = "";
+$comments = "";
+
 
 
 ?>
