@@ -81,10 +81,13 @@ if (mail($address, $e_subject, $msg, $headers)) {
     echo "</div>";
     echo "</fieldset>";
 
-    // Reset form fields
-    $_POST['name'] = '';
-    $_POST['email'] = '';
-    $_POST['comments'] = '';
+    // Clear all form fields
+    echo "<script>
+document.getElementById('name').value = '';
+document.getElementById('email').value = '';
+document.getElementById('sub').value = '';
+document.getElementById('comments').value = '';
+</script>";
 } else {
     echo 'ERROR!';
 }
