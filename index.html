@@ -1141,7 +1141,7 @@
                   if (!imgSrc) {
                     // If the article doesn't have an image_url, append the title to the image URL
                     const encodedTitle = encodeURIComponent(post.title);
-                    const imageUrl = `https://images.optitech.co.ke/?q=${encodedTitle}`;
+                    const imageUrl = `https://image.afyatelecentre.co.ke/?q=${encodedTitle}`;
                     // Fetch the image URLs from the API and set the first one as the img src
                     fetch(imageUrl, { mode: "cors" })
                       .then((response) => response.json())
